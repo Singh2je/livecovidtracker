@@ -32,7 +32,7 @@ const Covid = () => {
       <h1> ** LIVE **</h1>
       <h2>Corona virus tracker</h2>
 
-      <ul>
+      <ul className='top'>
         <li className='card'>
           <div className='card_main'>
             <div className='card_inner'>
