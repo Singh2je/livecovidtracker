@@ -1,5 +1,5 @@
 
-Practiced fetching API data using React UseEffect, and UseState
+This application fetches live data from an api and populates it using ReactJS
 
 You need:
 
