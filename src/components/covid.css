@@ -1,8 +1,8 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f8f8f8;
 }
 
 .covid-container {
@@ -11,13 +11,13 @@ body {
 }
 
 .header {
-  color: #333;
-  font-size: 24px;
+  color: #2c3e50;
+  font-size: 32px;
 }
 
 .sub-header {
-  color: #555;
-  font-size: 18px;
+  color: #3498db;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 
@@ -31,13 +31,16 @@ body {
 }
 
 .card {
-  background-color: #fff;
+  background-color: #ecf0f1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   transition: 0.3s;
-  border-radius: 8px;
-  width: 200px;
-  margin: 10px;
-  padding: 10px;
+  border-radius: 12px;
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-inner {
@@ -45,22 +48,23 @@ body {
 }
 
 .card-name {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 5px;
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
 .card-total {
-  font-size: 20px;
-  color: #007bff;
+  font-size: 28px;
+  color: #e74c3c;
   font-weight: bold;
 }
 
 .card-small {
-  font-size: 14px;
-  color: #888;
+  font-size: 16px;
+  color: #34495e;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
