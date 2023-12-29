@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useFormik } from 'formik';
 import './covid.css';
 
 const Covid = () => {
   const [data, setData] = useState({});
+  
+  useEffect(() => {
+    getCovidData();
+  }, []);
 
   const getCovidData = async () => {
     try {
@@ -14,9 +19,16 @@ const Covid = () => {
     }
   };
 
-  useEffect(() => {
-    getCovidData();
-  }, []);
+  // Formik Configuration
+  const formik = useFormik({
+    initialValues: {
+      recovered: data.recovered || '',
+    },
+    onSubmit: (values) => {
+      // Handle form submission, you can make an API call here
+      setData({ ...data, recovered: values.recovered });
+    },
+  });
 
   return (
     <>
@@ -67,6 +79,19 @@ const Covid = () => {
             </div>
           </li>
         </ul>
+
+        <form onSubmit={formik.handleSubmit}>
+          <label htmlFor="recoveredInput">Update Recovered Cases:</label>
+          <input
+            id="recoveredInput"
+            name="recovered"
+            type="number"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.recovered}
+          />
+          <button type="submit">Submit</button>
+        </form>
       </section>
     </>
   );
